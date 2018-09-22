@@ -1,0 +1,26 @@
+train_net: "mango/model/mobilessd_voc/train.prototxt"
+test_net: "mango/model/mobilessd_voc/test.prototxt"
+test_iter: 4952
+test_interval: 2500
+base_lr: 0.001
+display: 20
+max_iter: 70000
+lr_policy: "multistep"
+gamma: 0.3
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 1000
+snapshot_prefix: "mango/model/mobilessd_voc/mobilessd_voc_400x400"
+solver_mode: GPU
+debug_info: false
+snapshot_after_train: true
+test_initialization: false
+average_loss: 10
+stepvalue: 60000
+stepvalue: 66000
+stepvalue: 70000
+iter_size: 4
+type: "SGD"
+eval_type: "detection"
+ap_version: "11point"
+
